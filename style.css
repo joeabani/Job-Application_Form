@@ -1,0 +1,141 @@
+/* Background Styling */
+body {
+    background: url('/Images/woman-using-computer-credit-card.jpg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Form Wrapper */
+.formbold-main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Form Container */
+.formbold-form-wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;  
+    overflow-y: auto;
+    max-height: 90vh;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Elements */
+.formbold-form-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Animated Input Fields */
+.formbold-form-input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInInput 0.5s ease-in-out forwards;
+}
+
+/* Input Animation */
+@keyframes fadeInInput {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input Focus Effect */
+.formbold-form-input:focus,
+textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02);
+}
+
+/* Space Between Gender and Institution */
+.formbold-mb-3 {
+    margin-bottom: 25px;
+}
+
+/* Gender Radio Buttons */
+.formbold-radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+/* Logo Image */
+.formbold-img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 180px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Submit Button */
+.formbold-btn {
+    display: block;
+    width: 100%;
+    background: #007BFF;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Button Hover Animation */
+.formbold-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure scrolling on small screens */
+@media (max-height: 600px) {
+    .formbold-form-wrapper {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
