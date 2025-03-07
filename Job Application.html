@@ -4,67 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Form</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="formbold-main-wrapper">
+        <!-- Left Side: Form -->
+        <div class="formbold-form-wrapper">
+            <img src="/Images/Logo-removebg-preview.png" class="formbold-img">
+            <form action="process.php" method="POST">
 
-<div class="formbold-main-wrapper">
-  <div class="formbold-form-wrapper">
-     <img src="/Images/Logo-removebg-preview.png" class="formbold-img">
-     <form action="process.php" method="POST">
-      
-      <div class="formbold-mb-3">
-        <label for="fullname" class="formbold-form-label"> Full Name (Surname & Others) </label>
-        <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" class="formbold-form-input"/>
-      </div>
+                <div class="formbold-mb-3">
+                    <label for="fullname" class="formbold-form-label"> Full Name (Surname & Others) </label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" class="formbold-form-input"/>
+                </div>
 
-      <div class="formbold-mb-3">
-        <label for="email" class="formbold-form-label"> Email Address </label>
-        <input type="email" name="email" id="email" placeholder="example@email.com" class="formbold-form-input"/>
-      </div>
+                <div class="formbold-mb-3">
+                    <label for="email" class="formbold-form-label"> Email Address </label>
+                    <input type="email" name="email" id="email" placeholder="example@email.com" class="formbold-form-input"/>
+                </div>
 
-      <div class="formbold-mb-3">
-        <label for="phone" class="formbold-form-label"> Phone Number </label>
-        <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input"/>
-      </div>
+                <div class="formbold-mb-3">
+                    <label for="phone" class="formbold-form-label"> Phone Number </label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input"/>
+                </div>
 
-      <div class="formbold-mb-3">
-        <label for="address" class="formbold-form-label"> Home Address </label>
-        <input type="text" name="address" id="address" placeholder="Enter your address" class="formbold-form-input"/>
-      </div>
+                <div class="formbold-mb-3">
+                    <label for="address" class="formbold-form-label"> Home Address </label>
+                    <input type="text" name="address" id="address" placeholder="Enter your address" class="formbold-form-input"/>
+                </div>
 
-      <div class="formbold-mb-3">
-        <label class="formbold-form-label"> Gender </label>
-        <div class="formbold-radio-group">
-          <label class="formbold-radio">
-            <input type="radio" name="gender" value="male"> Male
-          </label>
-          <label class="formbold-radio">
-            <input type="radio" name="gender" value="female"> Female
-          </label>
+                <div class="formbold-mb-3">
+                    <label class="formbold-form-label"> Gender </label>
+                    <div class="formbold-radio-group">
+                        <label class="formbold-radio">
+                            <input type="radio" name="gender" value="male"> Male
+                        </label>
+                        <label class="formbold-radio">
+                            <input type="radio" name="gender" value="female"> Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="formbold-mb-3">
+                    <label for="institution" class="formbold-form-label"> Institution Attended </label>
+                    <input type="text" name="institution" id="institution" placeholder="Enter institution name" class="formbold-form-input"/>
+                </div>
+
+                <div class="formbold-mb-3">
+                    <label for="completion_date" class="formbold-form-label"> Date Completed </label>
+                    <input type="date" name="completion_date" id="completion_date" class="formbold-form-input"/>
+                </div>
+
+                <div class="formbold-mb-3">
+                    <label for="vision" class="formbold-form-label"> Your 5-Year Vision </label>
+                    <textarea rows="4" name="vision" id="vision" placeholder="Share your biggest ambition in a sentence" class="formbold-form-input"></textarea>
+                </div>
+
+                <button class="formbold-btn">Submit Application</button>
+
+                <!-- Logos at the Bottom -->
+                <div class="logos-container">
+                    <img src="/Images/OmniBSIC-BANK-LOGO.png" class="logo">
+                    <img src="/Images/KashPal_Page_1-removebg-preview.png" class="logo">
+                </div>
+
+            </form>
         </div>
-      </div>
 
-      <div class="formbold-mb-3">
-        <label for="institution" class="formbold-form-label"> Institution Attended </label>
-        <input type="text" name="institution" id="institution" placeholder="Enter institution name" class="formbold-form-input"/>
-      </div>
-
-      <div class="formbold-mb-3">
-        <label for="completion_date" class="formbold-form-label"> Date Completed </label>
-        <input type="date" name="completion_date" id="completion_date" class="formbold-form-input"/>
-      </div>
-
-      <div class="formbold-mb-3">
-        <label for="vision" class="formbold-form-label"> Your 5-Year Vision </label>
-        <textarea rows="4" name="vision" id="vision" placeholder="Share your biggest ambition in a sentence" class="formbold-form-input"></textarea>
-      </div>
-
-      <button class="formbold-btn">Submit Application</button>
-
-    </form>
-  </div>
-</div>
-
+        <!-- Right Side: Flyer -->
+        <div class="flyer-container">
+            <img src="/Images/Flyer.jpeg" alt="Flyer">
+        </div>
+    </div>
 </body>
 </html>
