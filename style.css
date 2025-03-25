@@ -167,21 +167,75 @@ textarea:focus {
     object-fit: contain;
 }
 
-/* Responsive */
+/* Responsive Styling */
 @media (max-width: 768px) {
     .formbold-main-wrapper {
-        flex-direction: column;
+        flex-direction: column;  /* Stack form and flyer on small screens */
+        width: 100%;
         height: auto;
+        padding: 20px;
     }
 
-    .formbold-form-wrapper,
+    .formbold-form-wrapper {
+        width: 100%;
+        max-width: 500px;  /* Ensures form is centered and not too wide */
+        padding: 20px;
+        max-height: none;
+    }
+
     .flyer-container {
         width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 20px;
     }
 
     .flyer-container img {
-        max-width: 300px;
+        max-width: 90%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Reduce input and button sizes for better touch interaction */
+    .formbold-form-input,
+    textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .formbold-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Make the logos smaller */
+    .logos-container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
     }
 }
 
-/*fadfkas*/
+/* Further Adjustments for Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+    .formbold-form-wrapper {
+        padding: 15px;
+    }
+
+    .formbold-form-label {
+        font-size: 14px;
+    }
+
+    .formbold-btn {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .flyer-container img {
+        max-width: 80%;
+    }
+}
+
