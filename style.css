@@ -12,6 +12,49 @@ body {
     align-items: center;
 }
 
+/* Header Container */
+.formbold-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Logo */
+.formbold-img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 2px; /* Reduced space between logo and text */
+}
+
+/* Stylish Title */
+.formbold-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px; /* Space between title and form fields */
+}
+
+/* Underline Effect */
+.formbold-title::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(to right, #000, #333);
+    margin: 3px auto 0;
+    border-radius: 2px;
+}
+
+
+
 /* Form Logo at the Top */
 .formbold-img {
     display: block;
@@ -109,7 +152,7 @@ textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     background-color: #fff;
@@ -162,8 +205,8 @@ textarea:focus {
 
 /* Logos Styling */
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
@@ -214,10 +257,25 @@ textarea:focus {
     }
 
     .logo {
-        width: 120px;
+        width: 180px;
         height: auto;
     }
+
+    .formbold-img {
+        max-width: 150px; /* Reduce logo size slightly */
+    }
+
+    .formbold-title {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        letter-spacing: 1.5px;
+    }
+
+    .formbold-title::after {
+        width: 50%;
+        height: 3px;
+    }
 }
+
 
 /* Further Adjustments for Extra Small Screens (Phones) */
 @media (max-width: 480px) {
@@ -236,6 +294,20 @@ textarea:focus {
 
     .flyer-container img {
         max-width: 80%;
+    }
+
+    .formbold-img {
+        max-width: 120px; /* Smaller logo on very small screens */
+    }
+
+    .formbold-title {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .formbold-title::after {
+        width: 40%;
+        height: 2px;
     }
 }
 
