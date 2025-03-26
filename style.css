@@ -210,104 +210,90 @@ textarea:focus {
     object-fit: contain;
 }
 
-/* Responsive Styling */
+/* Mobile Responsive Styling */
 @media (max-width: 768px) {
+    body {
+        height: auto; /* Allow body to adjust dynamically */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Prevents cropping */
+        overflow-x: hidden;
+    }
+
     .formbold-main-wrapper {
-        flex-direction: column;  /* Stack form and flyer on small screens */
+        flex-direction: column;
         width: 100%;
         height: auto;
         padding: 20px;
+        align-items: center;
     }
 
     .formbold-form-wrapper {
-        width: 100%;
-        max-width: 500px;  /* Ensures form is centered and not too wide */
+        width: 90%;
+        max-width: 500px;
         padding: 20px;
         max-height: none;
+        position: relative;
+        z-index: 2; /* Ensures form stays above */
+        margin-top: 0; /* Remove any negative margin */
     }
 
     .flyer-container {
         width: 100%;
-        height: auto;
+        max-height: 350px; /* Ensures it fits on all phones */
         position: relative;
-        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 10px; /* Adds spacing from the form */
     }
 
-    .flyer-container img {
-        max-width: 90%;
+    .flyer {
+        width: 100%;
         height: auto;
+        max-height: 100%;
         object-fit: contain;
+        opacity: 0;
+        animation: fadeFlyer 10s infinite;
     }
 
-    /* Reduce input and button sizes for better touch interaction */
-    .formbold-form-input,
-    textarea {
-        padding: 10px;
-        font-size: 14px;
-    }
+    .flyer1 { animation-delay: 0s; }
+    .flyer2 { animation-delay: 5s; }
 
-    .formbold-btn {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    /* Make the logos smaller */
-    .logos-container {
-        flex-wrap: wrap;
-    }
-
-    .logo {
-        width: 180px;
-        height: auto;
-    }
-
-    .formbold-img {
-        max-width: 150px; /* Reduce logo size slightly */
-    }
-
-    .formbold-title {
-        font-size: 20px; /* Adjust font size for smaller screens */
-        letter-spacing: 1.5px;
-    }
-
-    .formbold-title::after {
-        width: 50%;
-        height: 3px;
+    @keyframes fadeFlyer {
+        0%, 45% { opacity: 1; }
+        50%, 100% { opacity: 0; }
     }
 }
 
-
-/* Further Adjustments for Extra Small Screens (Phones) */
+/* Adjustments for Extra Small Screens (Phones < 480px) */
 @media (max-width: 480px) {
+    .flyer-container {
+        max-height: 300px; /* Further reduce height for smaller phones */
+    }
+
+    .flyer {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
     .formbold-form-wrapper {
         padding: 15px;
     }
 
-    .formbold-form-label {
-        font-size: 14px;
-    }
-
-    .formbold-btn {
-        font-size: 13px;
-        padding: 8px;
-    }
-
-    .flyer-container img {
-        max-width: 80%;
-    }
-
     .formbold-img {
-        max-width: 120px; /* Smaller logo on very small screens */
+        max-width: 120px; /* Adjust logo for smaller screens */
     }
 
     .formbold-title {
         font-size: 18px;
         letter-spacing: 1px;
     }
-
-    .formbold-title::after {
-        width: 40%;
-        height: 2px;
-    }
 }
+
+
+
 
